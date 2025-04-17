@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Mini Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f5faff;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      background-color: #00509e;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #003f7d;
+    }
+
+    hr {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Programs with Buttons</h1>
+
+  <!-- 1. Hello World -->
+  <h2>1. Print "Hello, World!"</h2>
+  <button onclick="sayHello()">Click to Say Hello</button>
+
+  <!-- 2. Add Two Numbers -->
+  <h2>2. Add Two Numbers</h2>
+  <button onclick="addNumbers()">Add Numbers</button>
+
+  <!-- 3. Find the Square Root -->
+  <h2>3. Find the Square Root</h2>
+  <button onclick="squareRoot()">Find Square Root</button>
+
+  <!-- 4. Area of a Triangle -->
+  <h2>4. Calculate the Area of a Triangle</h2>
+  <button onclick="areaOfTriangle()">Calculate Area</button>
+
+  <!-- 5. Swap Two Variables -->
+  <h2>5. Swap Two Variables</h2>
+  <button onclick="swapVariables()">Swap Values</button>
+
+  <script>
+    // 1. Hello World
+    function sayHello() {
+      alert("Hello, World!");
+    }
+
+    // 2. Add Two Numbers
+    function addNumbers() {
+      let a = parseFloat(prompt("Enter first number:"));
+      let b = parseFloat(prompt("Enter second number:"));
+      let sum = a + b;
+      alert("The sum is: " + sum);
+    }
+
+    // 3. Square Root
+    function squareRoot() {
+      let num = parseFloat(prompt("Enter a number:"));
+      let root = Math.sqrt(num);
+      alert("Square root of " + num + " is " + root.toFixed(2));
+    }
+
+    // 4. Area of Triangle
+    function areaOfTriangle() {
+      let base = parseFloat(prompt("Enter base of the triangle:"));
+      let height = parseFloat(prompt("Enter height of the triangle:"));
+      let area = 0.5 * base * height;
+      alert("Area of triangle is: " + area);
+    }
+
+    // 5. Swap Two Variables
+    function swapVariables() {
+      let x = prompt("Enter value of x:");
+      let y = prompt("Enter value of y:");
+      alert("Before swap: x = " + x + ", y = " + y);
+      let temp = x;
+      x = y;
+      y = temp;
+      alert("After swap: x = " + x + ", y = " + y);
+    }
+  </script>
+
+</body>
+</html>
